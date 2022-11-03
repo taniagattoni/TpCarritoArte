@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row" >
+          
+            <div class="four columns">
+                <img src="/carrito/img2/arte.png" id="logo"  width="50px" height="50px">
+            </div>
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                            <img src="/carrito/img2/carrito-de-compras.png" id="img-carrito" width="40px" height="40px">
+                          
+                          
+                            <div id="carrito">
+                                
+                                    
+                                    <table id="lista-carrito" class= "calcular-total"class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th>Tipo</th>
+                                                   <th></th>
+                                            </tr>
+                                            
+                                        </thead>
+                                      
+                                        <tbody> </tbody>
+                                    
+                                        </table>
+                                
+                                   
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                    <tr>
+                                        <th>Total:</th>
+                                    </tr>
+                            </div>
+                                    <a href="#" id="compras" class="button u-full-width">Comprar</a>
+                                    
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    </header>
+
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                    <div class="six columns">
+                        <div class="contenido-hero">
+                                <h2> Obras de Arte </h2>
+                                <p> « La belleza perece en la vida, pero es inmortal en el arte. » Leonardo da Vinci</p>
+                                <form action="#" id="busqueda" method="post" class="formulario">
+                                    <input class="u-full-width" type="text" placeholder="Buscar obra o artista" id="buscador">
+                                    <input type="submit" id="submit-buscador" class="submit-buscador">
+                                </form>
+                        </div>
+                    </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>Obras Increibles <br>
+                        ¡Descubrilas! </p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p> Los Mejores Artistas del Continente <br>
+                         ¡Animáte a ser parte de su historia! </p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p> - Originilidad -  <br>
+                        - Calidad Garantizada -</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h1 id="encabezado" class="encabezado">R e c r e A r t e</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="/carrito/img2/PinkPanter.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Pink Panter</h4>
+                        <p>Brice Marden</p>
+                        <img src="img/estrellas.png">
+                        <p class="precio"> $21.500<span class="u-pull-right ">$20.000</span></p>
+                        <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/Abstract.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>FacesOff</h4>
+                            <p>Banksy</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$17.000 <span class="u-pull-right ">$15.000</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Abstracto</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/Jirafa.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Giraffe</h4>
+                            <p>Christopher Wool</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$20.000 <span class="u-pull-right ">$19.000</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Expresionismo</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="/carrito/img2/Idolos.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Rock Stars</h4>
+                        <p>Luis Felipe Noé</p>
+                        <img src="img/estrellas.png">
+                        <p class="precio">$32.0000  <span class="u-pull-right ">$30.000</span></p>
+                        <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/UniverseMind.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Glow Mind</h4>
+                            <p>Yoshitomo Nara</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$25.000  <span class="u-pull-right ">$22.000</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Surrealismo</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/Africa.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Power Woman</h4>
+                            <p>Peter Doig</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$45.000  <span class="u-pull-right ">$40.000</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Arte Pop </span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="/carrito/img2/Ballons.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Moonlight</h4>
+                        <p>Yoshitomo Nara</p>
+                        <img src="img/estrellas.png">
+                        <p class="precio">$28.000  <span class="u-pull-right ">$25.000</span></p>
+                        <p class="tipo"> <span class="u-pull-center ">Surrealismo</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/Doh.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>D'oh!</h4>
+                            <p>Matt Groening</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$38.000  <span class="u-pull-right ">$37.000</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/Gold.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Gold Vibes</h4>
+                            <p>David Hockney</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$25.000  <span class="u-pull-right ">$22.500</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Realismo</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="/carrito/img2/Breaking.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Cook Time</h4>
+                            <p>Vince Gilligan</p>
+                            <img src="img/estrellas.png">
+                            <p class="precio">$23.000  <span class="u-pull-right ">$20.000</span></p>
+                            <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="/carrito/img2/zen.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>Soul Shines</h4>
+                                <p>Jasper Johns</p>
+                                <img src="img/estrellas.png">
+                                <p class="precio">$35.000  <span class="u-pull-right ">$32.000</span></p>
+                                <p class="tipo"> <span class="u-pull-center ">Expresionismo</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="/carrito/img2/Traveller.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>Traveller</h4>
+                                <p>David Hockney</p>
+                                <img src="img/estrellas.png">
+                                <p class="precio">$35.000 <span class="u-pull-right ">$32.500</span></p>
+                                <p class="tipo"> <span class="u-pull-center ">Surrealismo</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+            </div> <!--.row-->
+    </div>  
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns">
+                            <nav id="principal" class="menu">
+                                <a class="enlace" href="#">Artistas</a>
+                                <a class="enlace" href="#">Historia del Arte</a>
+                                <a class="enlace" href="#">Cuidados de las Obras</a>
+                                <a class="enlace" href="#">Soporte</a>
+                                <a class="enlace" href="#">Comentarios</a>
+                            </nav>
+                    </div>
+                    <div class="four columns">
+                            <nav id="secundaria" class="menu">
+                                <a class="enlace" href="#">¿Quienes Somos?</a>
+                                <a class="enlace" href="#">Galeria</a>
+                                <a class="enlace" href="#">Blog</a>
+                            </nav>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--script src="js/app.js"></scrit-->
+    <script src="app1.js"></script>
+</body>
+</html>
