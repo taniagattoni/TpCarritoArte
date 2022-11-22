@@ -8,31 +8,31 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 <header id="header" class="header">
     <div class="container">
         <div class="row" >
-          
             <div class="four columns">
                 <img src="/carrito/img2/arte.png" id="logo"  width="50px" height="50px">
+
             </div>
-            <div class="two columns u-pull-right">
+            <div class="two columns u-pull-right" onmouseover="pintarTotal()">
                 <ul>
+                    
                     <li class="submenu">
                             <img src="/carrito/img2/carrito-de-compras.png" id="img-carrito" width="40px" height="40px">
                           
-                          
                             <div id="carrito">
-                                
-                                    
-                                    <table id="lista-carrito" class= "calcular-total"class="u-full-width">
+                           
+                                    <table id="lista-carrito" class= "calcular-total"class="u-full-width" >
                                         <thead>
                                             <tr>
                                                 <th>Imagen</th>
                                                 <th>Nombre</th>
                                                 <th>Precio</th>
-                                                <th>Cantidad</th>
+                                                <th></th>
                                                 <th>Tipo</th>
                                                    <th></th>
                                             </tr>
@@ -40,25 +40,89 @@
                                         </thead>
                                       
                                         <tbody> </tbody>
-                                    
+                                        
                                         </table>
+                                        <div><p id="pagar"></p></div> 
+                                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                        <a href="#" id="comprar" class="button u-full-width" onclick="comprarU()">Comprar</a>
+                                        <form action="#" class="credit-card-div">
+                                            <div class="panel panel-default" >
+                                             <div class="panel-heading">
+                                                 
+                                                  <div class="row ">
+                                                          <div class="col-md-12">
+                                                           <img src="/carrito/img2/tarjeta-de-debito.png" id="logo"  width="50px" height="50px"><br>
+                                                              <input type="text" class="form-control" placeholder="Nombre y Apellido" /><br>
+                                                          </div>
+                                                      </div>
+                                                 <div class="row ">
+                                                          <div class="col-md-3 col-sm-3 col-xs-3">
+                                                              <span class="help-block text-muted small-font" >Nº Tarjeta </span>
+                                                              <input type="text" class="form-control" placeholder="*******" />
+                                                          </div>
+                                                     <div class="col-md-3 col-sm-3 col-xs-3">
+                                                              <span class="help-block text-muted small-font" >Vencimiento</span>
+                                                              <input type="text" class="form-control" placeholder="MM/AA" />
+                                                          </div>
+                                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                                              <span class="help-block text-muted small-font" >CVV</span>
+                                                              <input type="text" class="form-control" placeholder="•••" />
+                                                          </div>
+                                                     <div class="col-md-3 col-sm-3 col-xs-3">
+                                           
+                                                     </div>
+                                            </div>
+                                                 </div><br>
+                                                 
+                                                   <div class="row ">
+                                                        <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust" id="pagar">
+                                                            <a href="#" id="pagar" class="button u-full-width" onclick="pagarU()">Pagar</a>
+                                                            <a href="#" id="registro" class="button u-full-width" onclick="registroU()">Registrate</a>
+                                                              </div>
                                 
-                                   
-                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
-                                    <tr>
-                                        <th>Total:</th>
-                                    </tr>
+                                                              </div>
+                                                 
+                                                               </div>
+                                                 </div>
+                                         </form>
+
+                                       
+                                        </div>
                             </div>
-                                    <a href="#" id="compras" class="button u-full-width">Comprar</a>
+                                   
                                     
                     </li>
                 </ul>
             </div>
         </div> 
     </div>
+    
     </header>
-
-
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          Ingresar
+        </button>
+        <form class="dropdown-menu p-4">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail2" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="usuario" placeholder="Ingresa tu correo">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña">
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+              <label class="form-check-label" for="dropdownCheck2">
+                Recuerdame
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="validarForm()" id="ingresar">Ingresar</button>
+        </form>
+    </div>
+   
     <div id="hero">
         <div class="container">
             <div class="row">
@@ -95,8 +159,8 @@
         </div>
 
     </div>
-
-    <div id="lista-cursos" class="container">
+   
+    <div id="lista-cursos" class="container" >
         <h1 id="encabezado" class="encabezado">R e c r e A r t e</h1>
         <div class="row">
             <div class="four columns">
@@ -106,7 +170,7 @@
                         <h4>Pink Panter</h4>
                         <p>Brice Marden</p>
                         <img src="img/estrellas.png">
-                        <p class="precio"> $21.500<span class="u-pull-right ">$20.000</span></p>
+                        <p class="precio"> $21500<span class="u-pull-right ">$20000</span></p>
                         <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
                     </div>
@@ -119,7 +183,7 @@
                             <h4>FacesOff</h4>
                             <p>Banksy</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$17.000 <span class="u-pull-right ">$15.000</span></p>
+                            <p class="precio">$17000 <span class="u-pull-right ">$15000</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Abstracto</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
                         </div>
@@ -132,7 +196,7 @@
                             <h4>Giraffe</h4>
                             <p>Christopher Wool</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$20.000 <span class="u-pull-right ">$19.000</span></p>
+                            <p class="precio">$20000 <span class="u-pull-right ">$19000</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Expresionismo</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
                         </div>
@@ -148,7 +212,7 @@
                         <h4>Rock Stars</h4>
                         <p>Luis Felipe Noé</p>
                         <img src="img/estrellas.png">
-                        <p class="precio">$32.0000  <span class="u-pull-right ">$30.000</span></p>
+                        <p class="precio">$320000  <span class="u-pull-right ">$30000</span></p>
                         <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
                     </div>
@@ -161,7 +225,7 @@
                             <h4>Glow Mind</h4>
                             <p>Yoshitomo Nara</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$25.000  <span class="u-pull-right ">$22.000</span></p>
+                            <p class="precio">$25000  <span class="u-pull-right ">$22000</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Surrealismo</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
                         </div>
@@ -174,7 +238,7 @@
                             <h4>Power Woman</h4>
                             <p>Peter Doig</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$45.000  <span class="u-pull-right ">$40.000</span></p>
+                            <p class="precio">$45000  <span class="u-pull-right ">$40000</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Arte Pop </span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
                         </div>
@@ -189,7 +253,7 @@
                         <h4>Moonlight</h4>
                         <p>Yoshitomo Nara</p>
                         <img src="img/estrellas.png">
-                        <p class="precio">$28.000  <span class="u-pull-right ">$25.000</span></p>
+                        <p class="precio">$28000  <span class="u-pull-right ">$25000</span></p>
                         <p class="tipo"> <span class="u-pull-center ">Surrealismo</span></p>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
                     </div>
@@ -202,7 +266,7 @@
                             <h4>D'oh!</h4>
                             <p>Matt Groening</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$38.000  <span class="u-pull-right ">$37.000</span></p>
+                            <p class="precio">$38000  <span class="u-pull-right ">$37000</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
                         </div>
@@ -215,7 +279,7 @@
                             <h4>Gold Vibes</h4>
                             <p>David Hockney</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$25.000  <span class="u-pull-right ">$22.500</span></p>
+                            <p class="precio">$25000  <span class="u-pull-right ">$22500</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Realismo</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
                         </div>
@@ -230,7 +294,7 @@
                             <h4>Cook Time</h4>
                             <p>Vince Gilligan</p>
                             <img src="img/estrellas.png">
-                            <p class="precio">$23.000  <span class="u-pull-right ">$20.000</span></p>
+                            <p class="precio">$23000  <span class="u-pull-right ">$20000</span></p>
                             <p class="tipo"> <span class="u-pull-center ">Arte Pop</span></p>
                             <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
                         </div>
@@ -243,7 +307,7 @@
                                 <h4>Soul Shines</h4>
                                 <p>Jasper Johns</p>
                                 <img src="img/estrellas.png">
-                                <p class="precio">$35.000  <span class="u-pull-right ">$32.000</span></p>
+                                <p class="precio">$35000  <span class="u-pull-right ">$32000</span></p>
                                 <p class="tipo"> <span class="u-pull-center ">Expresionismo</span></p>
                                 <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
                             </div>
@@ -256,7 +320,7 @@
                                 <h4>Traveller</h4>
                                 <p>David Hockney</p>
                                 <img src="img/estrellas.png">
-                                <p class="precio">$35.000 <span class="u-pull-right ">$32.500</span></p>
+                                <p class="precio">$35000 <span class="u-pull-right ">$32500</span></p>
                                 <p class="tipo"> <span class="u-pull-center ">Surrealismo</span></p>
                                 <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
                             </div>
@@ -264,10 +328,9 @@
                 </div>
             </div> <!--.row-->
     </div>  
-
     <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row">
+           
+                  
                     <div class="four columns">
                             <nav id="principal" class="menu">
                                 <a class="enlace" href="#">Artistas</a>
@@ -278,17 +341,21 @@
                             </nav>
                     </div>
                     <div class="four columns">
-                            <nav id="secundaria" class="menu">
-                                <a class="enlace" href="#">¿Quienes Somos?</a>
-                                <a class="enlace" href="#">Galeria</a>
-                                <a class="enlace" href="#">Blog</a>
-                            </nav>
-                    </div>
-            </div>
+                        <nav id="secundaria" class="menu">
+                            <a class="enlace" href="#">¿Quienes Somos?</a>
+                            <a class="enlace" href="#">Galeria</a>
+                            <a class="enlace" href="#">Blog</a>
+                        </nav>
+                </div>
         </div>
+    </div>          
+                    
+                  
     </footer>
 
-    <!--script src="js/app.js"></scrit-->
+ 
     <script src="app1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </body>
 </html>

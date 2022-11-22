@@ -1,28 +1,29 @@
 html {
-    font-size: 62.5%;
+    font-size: 62.5%  !important; 
 }
 body {
-    background-color: #c5b0b0
+    background-color: #c5b0b0  !important;
 }
 h1 {
-    text-align: center;
+    text-align: center !important;
+    font-weight:200 !important;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 3rem  !important;
 }
 h4 {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 16px !important;
+    font-weight: 700 !important;
 }
 header {
     padding: 15px 0 0 0;
     background: rgb(88, 41, 110);
-    text-align: center;
+    text-align: center !important;
   
 }
-@media (min-width: 750px) {
+@media (min-width: 750px ) {
     header {
-        text-align: left;
+        text-align: left !important;
     }
 }
 .borrar-curso {
@@ -31,7 +32,7 @@ header {
     padding: 5px 10px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: bold  !important;
 }
 
 ul {
@@ -39,50 +40,51 @@ ul {
 }
 #hero {
     background-image:url(/carrito/img2/BckG1.jpg);
-    height: 350px;
-    background-size: cover;
+    height: 350px !important;
+    background-size: cover!important;
 }
 #encabezado {
-    margin: 30px 0;
+    margin: 30px 0 !important;
+    font-size: 60px;
 }
 .submenu {
-    position: relative;
+    position: relative !important;
 }
 
 .submenu #carrito{
     display: none;
 }
-.submenu:hover #carrito{
-    display: block;
-    position: absolute;
-    right:0;
+.submenu:hover #carrito{  
+    display: block!important;
+    position: absolute!important;
+    right:0 !important;
 
     top:100%;
     z-index: 1;
     background-color: white;
-    padding: 10px;
-    min-height: 400px;
-    min-width: 300px;
+    padding: 10px !important;
+    min-height: 400px !important;
+    min-width: 300px !important;
 }
 .vacio {
-    padding: 10px;
+    padding: 10px!important;
     background-color: crimson;
-    text-align: center;
-    border-radius: 10px;
-    color: white;
+    text-align: center!important;
+    border-radius: 10px!important;
+    color: white  !important;
 }
 .contenido-hero {
-    margin-top: 80px;
+    margin-top: 80px!important;
     color: rgb(252, 244, 248);
-    font-size: medium;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-size: medium!important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 .contenido-hero form {
-    position: relative;
-    margin-bottom: 0;
+    position: relative!important;
+    margin-bottom: 0 !important;
 }
 .contenido-hero form #buscador {
-    height: 50px;
+    height: 50px !important;
     margin-bottom: 0;
 }
 .contenido-hero form .submit-buscador {
@@ -93,7 +95,7 @@ ul {
     padding: 0;
     display: block;
     text-indent: -9999px;
-    width: 50px;
+    width: 50px !important;
     background-image: url(../img/lupa.png);
     background-position: right center;
     background-repeat: no-repeat;
@@ -102,30 +104,30 @@ ul {
 
 
 .barra {
-    padding: 20px 0;
+    padding: 20px 0  !important;
     background: #741d51; /* Old browsers */
     background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%) !important;; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ) /* IE6-9 */
 }
 
 .barra p {
     margin:0;
-    color: white;
+    color: white  !important;
 }
-.icono {
+.icono { 
     background-repeat: no-repeat;
-    background-position: left;
-    padding-left: 20px;
-    background-size: 30px;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    background-position: left!important;
+    padding-left: 20px!important;
+    background-size: 30px!important;
+    margin-bottom: 40px!important;
+    text-align: center!important;
+    font-family:Arial, Helvetica, sans-serif !important;
 }
 @media (min-width: 650px) {
     .icono {
-        margin-bottom:0;
+        margin-bottom:0 !important;
     }
 }
 .icono1 {
@@ -140,7 +142,7 @@ ul {
 }
 
 #lista-cursos .row {
-    margin-bottom:20px;
+    margin-bottom:20px  !important;
 }
 .agregar-carrito {
     margin:10px 0;
@@ -148,41 +150,41 @@ ul {
 
 .card {
     text-align: center;
-    border: 1px solid #e1e1e1;
-    background: white;
+    border: 1px solid #e1e1e1 !important;
+    background: white !important;
 }
 @media (min-width: 550px) {
     .card {
-        text-align: left;
+        text-align: left !important;
     }
 }
 .info-card  {
-    padding: 10px 20px;
+    padding: 10px 20px !important;
 }
 
 .info-card p, 
 .card h4 {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
 }
 .info-card .precio {
-    text-decoration: line-through;
-    font-size: 18px;
-    margin-top: 10px;
+    text-decoration: line-through !important;
+    font-size: 18px !important;
+    margin-top: 10px !important;
 }
 .info-card .precio span {
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 700!important;
+    font-size: 22px !important;
 }
 
 
 .footer {
-    margin-top: 40px;
+    margin-top: 40px !important;
     border-top:1px solid #aaa;;
-    padding-top: 40px;   
+    padding-top: 40px !important;
 }
 .footer .menu a{
 display: block;
-margin-bottom: 10px;
-text-decoration: none;
+margin-bottom: 10px !important;
+text-decoration: none !important;
 }
 
